@@ -1,0 +1,30 @@
+*.gem
+pkg
+Gemfile.lock
+
+# vi swap files (the extra letters are used when there are duplicates)
+*.sw[ponml]
+.DS_Store
+
+README.html
+
+# emacs backup files (also used by other programs)
+*~
+\#*
+.\#*
+.nfs*
+.bundle
+
+# Ignore (IDE) project files
+.idea
+.project
+.projects
+.settings
+*.sublime-*
+
+# YARDoc files
+.yardoc
+doc
+
+# temporary files
+tmp
