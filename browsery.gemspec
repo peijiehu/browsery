@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version       = Browsery::VERSION
   s.authors       = ["Peijie Hu"]
 
-  s.summary       = %q{Browsery}
-  s.description   = %q{Browsery}
+  s.summary       = %q{Browser automation test framework}
+  s.description   = %q{Browsery is a browser automation test framework}
   s.homepage      = "https://github.com/peijiehu/browsery"
   s.license       = "MIT"
 
