@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'browsery'
+
+Browsery::Runner.after_run { Browsery::Connector.finalize!(:force) }
+Browsery::Runner.run!(ARGV)
