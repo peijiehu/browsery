@@ -8,3 +8,5 @@ Browsery is a browser automation test framework built on top of minitest and sel
 Add this line to your Gemfile and run `bundle install`:
 
     gem 'browsery'
+
+# test git user config change
