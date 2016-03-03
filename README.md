@@ -9,4 +9,3 @@ Add this line to your Gemfile and run `bundle install`:
 
     gem 'browsery'
 
-# test git user config change
