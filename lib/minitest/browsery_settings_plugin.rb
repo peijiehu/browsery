@@ -78,6 +78,14 @@ module Minitest
       integer_value = value.nil? ? 1 : value.to_i
       options[:rerun_failure] = integer_value
     end
+
+    options[:visual_regression] = false
+    parser.on('-V', '--visual-regression [TOLERANCE]', 'Enable visual regression,
+    can optionally set tolerance level in percentage(0 tolerance by default),
+    eg. -V 0.01 fails a test if visual difference is larger than 1%') do |value|
+      float_value = value.nil? ? 0 : value.to_f
+      options[:visual_regression] = float_value
+    end
   end
 
 end
