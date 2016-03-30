@@ -77,6 +77,10 @@ module Browsery
       hsh.fetch(:rerun_failure)
     end
 
+    def visual_regression
+      hsh.fetch(:visual_regression)
+    end
+
     def seed
       hsh.fetch(:seed, nil).to_i
     end
