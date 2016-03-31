@@ -55,6 +55,6 @@ require_relative 'connector'
 require_relative 'page_objects'
 require_relative 'parallel'
 require_relative 'settings'
-
+require_relative 'diff_image'
 require_relative 'test_case'
 require_relative 'console'
