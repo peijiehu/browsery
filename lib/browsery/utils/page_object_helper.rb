@@ -227,9 +227,9 @@ module Browsery
             new_image_path = @driver.save_screenshot("visual_regression/#{test_step_id}-new.png")
             diff_image = Browsery::DiffImage.new(base_image_path, new_image_path)
             diff_percentage = diff_image.calculate_changes
-            diff_image_path = "visual_regression/#{test_step_id}-diff.png"
-            diff_image.save(diff_image_path)
             if diff_percentage > Browsery.settings.visual_regression
+              diff_image_path = "visual_regression/#{test_step_id}-diff.png"
+              diff_image.save(diff_image_path)
               puts "failed at visual regression, diff image saved - #{diff_image_path}"
               fail
             end
