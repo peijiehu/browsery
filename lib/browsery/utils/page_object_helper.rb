@@ -229,14 +229,14 @@ module Browsery
             diff_percentage = diff_image.calculate_changes
             if diff_percentage > Browsery.settings.visual_regression
               diff_image_path = "visual_regression/#{test_step_id}-diff.png"
-              diff_image.save(diff_image_path)
-              puts "failed at visual regression, diff image saved - #{diff_image_path}"
-              fail
+              diff_image.save_diff(diff_image_path)
+              return false
             end
           else
             @driver.save_screenshot("visual_regression/#{test_step_id}-base.png")
           end
         end
+        true
       end
 
       private
