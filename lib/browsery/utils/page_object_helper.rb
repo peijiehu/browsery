@@ -220,6 +220,25 @@ module Browsery
         calling_page.class.to_s.split('::').last.downcase
       end
 
+      def visual_regression
+        if Browsery.settings.visual_regression
+          if File.exist?("visual_regression/#{name}-base.png")
+            base_image_path = "visual_regression/#{name}-base.png"
+            new_image_path = @driver.save_screenshot("visual_regression/#{name}-new.png")
+            diff_image = Browsery::DiffImage.new(base_image_path, new_image_path)
+            diff_percentage = diff_image.calculate_changes
+            diff_image_path = "visual_regression/#{name}-diff.png"
+            diff_image.save(diff_image_path)
+            if diff_percentage > Browsery.settings.visual_regression
+              puts "failed at visual regression, diff image saved - #{diff_image_path}"
+              fail
+            end
+          else
+            @driver.save_screenshot("visual_regression/#{name}-base.png")
+          end
+        end
+      end
+
       private
 
       # @param  eg. (:css, 'button.cancel') or (*BUTTON_SUBMIT_SEARCH)
