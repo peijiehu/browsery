@@ -2,6 +2,9 @@ module Browsery
   module PageObjects
     class Section
       extend ElementContainer
+      include Utils::Castable
+      include Utils::Loggable
+      include Utils::PageObjectHelper
 
       attr_reader :root_element, :parent
 
