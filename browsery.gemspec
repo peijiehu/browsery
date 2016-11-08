@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'minitap', '~> 0.5.3'
   s.add_dependency 'pry', '~> 0.10'
   s.add_dependency 'minitest', '~>5.4.0'
-  s.add_dependency 'selenium-webdriver', '~> 2.46'
+  s.add_dependency 'selenium-webdriver', '~> 3.0'
   s.add_dependency 'rest-client', '~> 1.8'
   s.add_dependency 'chunky_png', '~> 1.3'
 
